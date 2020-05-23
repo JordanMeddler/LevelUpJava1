@@ -1,3 +1,6 @@
+import Tasks.LessonOne.TaskFour;
+import Tasks.LessonOne.TaskThree;
+
 import java.util.Scanner;
 
 public class Homework {
@@ -12,6 +15,7 @@ public class Homework {
         lessonPointNumber = input.nextInt();
         input.nextLine(); // костыль, подробнее https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
 
+        // Урок 1
         if (lessonNumber == 1) {
             if (lessonPointNumber == 3) {
                 System.out.println("Для какого примитивного типа будем смотреть выполненное задание?");
@@ -20,7 +24,7 @@ public class Homework {
                 // Немного отказоустойчивости ,но это практически бессмысленно так как приложение очень
                 // не дружелюбно - принимает только конкретные значения и не обрабатывает никакие исключения
                 String type = input.nextLine().toLowerCase();
-                TaskThree.taskThree(type); // Прокидываем введенный тип в класс TaskThree внутрь метода taskThree
+                TaskThree.taskThree(type); // Прокидываем введенный тип в класс Tasks.LessonOne.TaskThree внутрь метода taskThree
             } else if (lessonPointNumber == 4) {
                 System.out.println("Для готового примера введи 0, для того что бы считать значения с клавиатуры введи 1 (поддерживаются только целочисленные значения): ");
                 int linearEquationExample = input.nextInt();

@@ -1,3 +1,5 @@
+package Checker;
+
 public class TypeChecker {
     // Перегрузка метода instanceOfCheck для отпределения типа итогового значения
     public static void instanceOfCheck(byte i) {

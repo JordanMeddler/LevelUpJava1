@@ -71,7 +71,35 @@ public class Homework {
                         System.out.println("https://en.wikipedia.org/wiki/Sign_(mathematics)#Sign_of_zero");
                     } else Tasks.LessonTwo.TaskTwo.nearTen(inputFirst, inputSecond);
                 }
-            }
+            } else if (lessonPointNumber == 3) {
+                Tasks.LessonTwo.TaskThree.randomInInterval();
+            } else if (lessonPointNumber == 4) {
+                Tasks.LessonTwo.TaskFour.threeAndMore();
+            } else if (lessonPointNumber == 5) {
+                Tasks.LessonTwo.TaskFive.threeVariables();
+            } else if (lessonPointNumber == 6) {
+                Tasks.LessonTwo.TaskSix.six();
+            } else if (lessonPointNumber == 7) {
+                Tasks.LessonTwo.TaskSeven.fiftyFive();
+            } else if (lessonPointNumber == 8) {
+                Tasks.LessonTwo.TaskEight.backwards();
+            } else if (lessonPointNumber == 9) {
+                Tasks.LessonTwo.TaskNine.firstTwenty();
+            } else if (lessonPointNumber == 10) {
+                System.out.println("Пожалуйста введите натуральное число.");
+                System.out.println("Натуральные числа - числа, возникающие естественным образом при счёте (например, 1, 2, 3, 4, …)");
+                System.out.println("Ваш ввод: ");
+                int natural = input.nextInt();
+                if (natural <= 0) {
+                    System.out.println("Вы ввели не натуральное число.");
+                } else Tasks.LessonTwo.TaskTen.factorial(natural);
+            } else if (lessonPointNumber == 11) {
+                System.out.println("Введите натуральное число: ");
+                int natural = input.nextInt();
+                if (natural <=0){
+                    System.out.println("Некорректный ввод. Натуральные числа - числа, возникающие естественным образом при счёте (например, 1, 2, 3, 4, …)");
+                } else Tasks.LessonTwo.TaskEleven.wtf(natural);
+            } else System.out.println("По этому заданию ничего нет :(");
         } else System.out.println("По этому уроку ничего нет :(");
     }
 }

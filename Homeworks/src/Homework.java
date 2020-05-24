@@ -1,5 +1,6 @@
 import Tasks.LessonOne.TaskFour;
 import Tasks.LessonOne.TaskThree;
+import Tasks.LessonTwo.TaskOne;
 
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ public class Homework {
         lessonPointNumber = input.nextInt();
         input.nextLine(); // костыль, подробнее https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
 
-        // Урок 1
+        // УРОК 1
         if (lessonNumber == 1) {
             if (lessonPointNumber == 3) {
                 System.out.println("Для какого примитивного типа будем смотреть выполненное задание?");
@@ -39,6 +40,38 @@ public class Homework {
                     TaskFour.linearEquation(firstDouble, secondDouble);
                 } else System.out.println("Для ввода доступны только 1 и 0, перезапусти программу.");
             } else System.out.println("По этому заданию ничего нет :(");
+            // УРОК 2
+        } else if (lessonNumber == 2) {
+            if (lessonPointNumber == 1) {
+                System.out.println("Введите целочисленное значение для проверки четности: ");
+                int eventOddVal = input.nextInt();
+                TaskOne.eventOdd(eventOddVal);
+            } else if (lessonPointNumber == 2) {
+                double inputFirst, inputSecond;
+                System.out.println("Необходимо ввести два положительных числа. Ввести отрицательные даже не пытайтесь!");
+                System.out.println("Введите первое положительное число: ");
+                // В вопросе является ли ноль положительным числом я воспрользовался этой статьей
+                // https://en.wikipedia.org/wiki/Sign_(mathematics)#Sign_of_zero
+                // так что в данном задании сичтаю ноль ни положительным, ни отрицательным.
+                inputFirst = input.nextDouble();
+                if (inputFirst < 0) {
+                    System.out.println("C'mon bro! Я же попросил только положительное число!");
+                } else if (inputFirst == 0) {
+                    System.out.println("C'mon bro! Я же попросил только положительное число!");
+                    System.out.print("Если хочешь поспорить о положительности ноля, тебе сюда: ");
+                    System.out.println("https://en.wikipedia.org/wiki/Sign_(mathematics)#Sign_of_zero");
+                } else {
+                    System.out.println("Введите второе положительное число: ");
+                    inputSecond = input.nextDouble();
+                    if (inputSecond < 0) {
+                        System.out.println("C'mon bro! Я же попросил только положительное число!");
+                    } else if (inputSecond == 0) {
+                        System.out.println("C'mon bro! Я же попросил только положительное число!");
+                        System.out.print("Если хочешь поспорить о положительности ноля, тебе сюда: ");
+                        System.out.println("https://en.wikipedia.org/wiki/Sign_(mathematics)#Sign_of_zero");
+                    } else Tasks.LessonTwo.TaskTwo.nearTen(inputFirst, inputSecond);
+                }
+            }
         } else System.out.println("По этому уроку ничего нет :(");
     }
 }

@@ -1,6 +1,8 @@
 import Tasks.LessonOne.TaskFour;
 import Tasks.LessonOne.TaskThree;
+import Tasks.LessonThree.Calculator;
 import Tasks.LessonTwo.TaskOne;
+import Tasks.LessonTwo.TaskSeven;
 
 import java.util.Scanner;
 
@@ -100,6 +102,39 @@ public class Homework {
                     System.out.println("Некорректный ввод. Натуральные числа - числа, возникающие естественным образом при счёте (например, 1, 2, 3, 4, …)");
                 } else Tasks.LessonTwo.TaskEleven.wtf(natural);
             } else System.out.println("По этому заданию ничего нет :(");
-        } else System.out.println("По этому уроку ничего нет :(");
+        } else  if (lessonNumber == 3){
+            if (lessonPointNumber == 1){
+                System.out.println("Выберете операцию, для ввода допустимы sum, division, multiplication и subtraction: ");
+                String operation = input.next().toLowerCase();
+
+                System.out.println("Выберете тип переменных с которыми будете работать (доступны типы double, long и int): ");
+                String type = input.nextLine().toLowerCase();
+                if (operation.equals("sum") & type.equals("double")) {
+                    System.out.println("Введите первый double: ");
+                    double double1 = input.nextDouble();
+                    System.out.println("Введите второй double: ");
+                    double double2 = input.nextDouble();
+                    System.out.println(Tasks.LessonThree.Calculator.sum(double1, double2));
+                }
+
+            } else if (lessonPointNumber == 2){
+                int[] array = new int[5];
+                System.out.println("Введите массив int по одному значению: ");
+                array[0] = input.nextInt();
+                array[1] = input.nextInt();
+                array[2] = input.nextInt();
+                array[3] = input.nextInt();
+                array[4] = input.nextInt();
+                System.out.println("Введите что вам найти - min или max?: ");
+                String search = input.nextLine().toLowerCase();
+                input.nextLine();
+                if (search.equals("min")){
+                    int answer = Tasks.LessonThree.ArrayUtil.min(array);
+                    System.out.println(answer);
+                }
+            }
+        }
+
+        else System.out.println("По этому уроку ничего нет :(");
     }
 }

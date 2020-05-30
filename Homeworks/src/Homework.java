@@ -105,27 +105,94 @@ public class Homework {
             // УРОК 3
         } else if (lessonNumber == 3) {
             if (lessonPointNumber == 1) {
-                System.out.println("Выберете операцию, для ввода допустимы sum, division, multiplication и subtraction: ");
+                System.out.println("Выберете операцию, для ввода допустимы только sum, division, multiplication и subtraction: ");
                 String operation = input.next().toLowerCase();
-
+                input.nextLine();
                 System.out.println("Выберете тип переменных с которыми будете работать (доступны типы double, long и int): ");
                 String type = input.nextLine().toLowerCase();
+                // Обрабатываем сумму
                 if (operation.equals("sum") & type.equals("double")) {
                     System.out.println("Введите первый double: ");
                     double double1 = input.nextDouble();
                     System.out.println("Введите второй double: ");
                     double double2 = input.nextDouble();
-                    System.out.println(Tasks.LessonThree.Calculator.sum(double1, double2));
-                }
-
+                    System.out.println("Сумма введенных double: " + Tasks.LessonThree.Calculator.sum(double1, double2));
+                } else if (operation.equals("sum") & type.equals("long")) {
+                    System.out.println("Введите первый long: ");
+                    long long1 = input.nextLong();
+                    System.out.println("Введите второй long: ");
+                    long long2 = input.nextLong();
+                    System.out.println("Сумма введенных long: " + Tasks.LessonThree.Calculator.sum(long1, long2));
+                } else if (operation.equals("sum") & type.equals("int")) {
+                    System.out.println("Введите первый int: ");
+                    int int1 = input.nextInt();
+                    System.out.println("Введите второй int: ");
+                    int int2 = input.nextInt();
+                    System.out.println("Сумма введенных int: " + Tasks.LessonThree.Calculator.sum(int1, int2));
+                    // Обрабатываем деление
+                } else if (operation.equals("division") & type.equals("double")) {
+                    System.out.println("Введите первый double: ");
+                    double double1 = input.nextDouble();
+                    System.out.println("Введите второй double: ");
+                    double double2 = input.nextDouble();
+                    System.out.println("Деление введенных double: " + Tasks.LessonThree.Calculator.division(double1, double2));
+                } else if (operation.equals("division") & type.equals("long")) {
+                    System.out.println("Введите первый long: ");
+                    long long1 = input.nextLong();
+                    System.out.println("Введите второй long: ");
+                    long long2 = input.nextLong();
+                    System.out.println("Деление введенных long: " + Tasks.LessonThree.Calculator.division(long1, long2));
+                } else if (operation.equals("division") & type.equals("int")) {
+                    System.out.println("Введите первый int: ");
+                    int int1 = input.nextInt();
+                    System.out.println("Введите второй int: ");
+                    int int2 = input.nextInt();
+                    System.out.println("Деление введенных int: " + Tasks.LessonThree.Calculator.division(int1, int2));
+                    // Обрабатываем умножение
+                } else if (operation.equals("multiplication") & type.equals("double")) {
+                    System.out.println("Введите первый double: ");
+                    double double1 = input.nextDouble();
+                    System.out.println("Введите второй double: ");
+                    double double2 = input.nextDouble();
+                    System.out.println("Умножение введенных double: " + Tasks.LessonThree.Calculator.multiplication(double1, double2));
+                } else if (operation.equals("multiplication") & type.equals("long")) {
+                    System.out.println("Введите первый long: ");
+                    long long1 = input.nextLong();
+                    System.out.println("Введите второй long: ");
+                    long long2 = input.nextLong();
+                    System.out.println("Умножение введенных long: " + Tasks.LessonThree.Calculator.multiplication(long1, long2));
+                } else if (operation.equals("multiplication") & type.equals("int")) {
+                    System.out.println("Введите первый int: ");
+                    int int1 = input.nextInt();
+                    System.out.println("Введите второй int: ");
+                    int int2 = input.nextInt();
+                    System.out.println("Умножение введенных int: " + Tasks.LessonThree.Calculator.multiplication(int1, int2));
+                    // Обрабатываем вычитание
+                } else if (operation.equals("subtraction") & type.equals("double")) {
+                    System.out.println("Введите первый double: ");
+                    double double1 = input.nextDouble();
+                    System.out.println("Введите второй double: ");
+                    double double2 = input.nextDouble();
+                    System.out.println("Вычитание введенных double: " + Tasks.LessonThree.Calculator.subtraction(double1, double2));
+                } else if (operation.equals("subtraction") & type.equals("long")) {
+                    System.out.println("Введите первый long: ");
+                    long long1 = input.nextLong();
+                    System.out.println("Введите второй long: ");
+                    long long2 = input.nextLong();
+                    System.out.println("Вычитание введенных long: " + Tasks.LessonThree.Calculator.subtraction(long1, long2));
+                } else if (operation.equals("subtraction") & type.equals("int")) {
+                    System.out.println("Введите первый int: ");
+                    int int1 = input.nextInt();
+                    System.out.println("Введите второй int: ");
+                    int int2 = input.nextInt();
+                    System.out.println("Вычитание введенных int: " + Tasks.LessonThree.Calculator.subtraction(int1, int2));
+                } else System.out.println("Неккоректный ввод.");
             } else if (lessonPointNumber == 2) {
                 int[] array = new int[5];
-                System.out.println("Введите массив int[5] по одному значению: ");
-                array[0] = input.nextInt();
-                array[1] = input.nextInt();
-                array[2] = input.nextInt();
-                array[3] = input.nextInt();
-                array[4] = input.nextInt();
+                System.out.println("Введите массив int[5] по одному значению (обязательно только int!): ");
+                for (int arrayInput = 0; arrayInput < array.length; arrayInput++) {
+                    array[arrayInput] = input.nextInt();
+                }
                 input.nextLine();
                 System.out.println("Введите что вам найти - min или max?: ");
                 String search = input.nextLine();
@@ -136,7 +203,9 @@ public class Homework {
                     int answer = Tasks.LessonThree.ArrayUtil.max(array);
                     System.out.println("Максимальное число что вы ввели - это " + answer);
                 } else System.out.println("Некорректный ввод.");
-            } else System.out.println("По этому уроку ничего нет :(");
-        }
+            } else System.out.println("По этому заданию ничего нет :(");
+        } else System.out.println("По этому уроку ничего нет :(");
     }
 }
+
+

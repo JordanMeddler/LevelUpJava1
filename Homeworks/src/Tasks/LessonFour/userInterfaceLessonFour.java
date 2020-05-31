@@ -30,14 +30,23 @@ public class userInterfaceLessonFour {
 
     public static void twoRectangles() {
         System.out.println("Поддерживается только int!!!");
-        System.out.println("Введите координату верхней левой вершины первого прямоугольника: ");
-        int upperLeftFirst = input.nextInt();
-        System.out.println("Введите координату нижней правой вершины первого прямоугольника: ");
-        int bottomRightFirst = input.nextInt();
-        System.out.println("Введите координату верхней левой вершины второго прямоугольника: ");
-        int upperLeftSecond = input.nextInt();
-        System.out.println("Введите координату нижней правой вершины второго прямоугольника: ");
-        int bottomRightSecond = input.nextInt();
-
+        System.out.println("Введите координату x верхней левой вершины первого прямоугольника: ");
+        int upperLeftFirstX = input.nextInt();
+        System.out.println("Введите координату y верхней левой вершины первого прямоугольника: ");
+        int upperLeftFirstY = input.nextInt();
+        System.out.println("Введите координату x нижней правой вершины первого прямоугольника: ");
+        int bottomRightFirstX = input.nextInt();
+        System.out.println("Введите координату y нижней правой вершины первого прямоугольника: ");
+        int bottomRightFirstY = input.nextInt();
+        System.out.println("Введите координату x верхней левой вершины второго прямоугольника: ");
+        int upperLeftSecondX = input.nextInt();
+        System.out.println("Введите координату y верхней левой вершины второго прямоугольника: ");
+        int upperLeftSecondY = input.nextInt();
+        System.out.println("Введите координату x нижней правой вершины второго прямоугольника: ");
+        int bottomRightSecondX = input.nextInt();
+        System.out.println("Введите координату y нижней правой вершины второго прямоугольника: ");
+        int bottomRightSecondY = input.nextInt();
+        twoRectangles.coordinates(upperLeftFirstX, upperLeftFirstY, bottomRightFirstX, bottomRightFirstY,
+                                    upperLeftSecondX, upperLeftSecondY, bottomRightSecondX, bottomRightSecondY);
     }
 }

@@ -2,7 +2,6 @@ import Tasks.LessonFour.userInterfaceLessonFour;
 import Tasks.LessonOne.TaskFour;
 import Tasks.LessonOne.TaskThree;
 import Tasks.LessonTwo.TaskOne;
-import Tasks.LessonTwo.TaskSeven;
 
 import java.util.Scanner;
 
@@ -212,7 +211,10 @@ public class Homework {
             } else if (lessonPointNumber == 3){
                 Tasks.LessonFour.userInterfaceLessonFour.twoRectangles();
             } else System.out.println("По этому заданию ничего нет :(");
-        }  else System.out.println("По этому уроку ничего нет :(");
+        }  else if (lessonNumber == 5) {
+            Tasks.LessonFive.EntityApp.showArray();
+        }
+        else System.out.println("По этому уроку ничего нет :(");
     }
 }
 

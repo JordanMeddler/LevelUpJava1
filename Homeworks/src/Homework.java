@@ -203,18 +203,25 @@ public class Homework {
                     System.out.println("Максимальное число что вы ввели - это " + answer);
                 } else System.out.println("Некорректный ввод.");
             } else System.out.println("По этому заданию ничего нет :(");
-        } else if (lessonNumber == 4){
-            if (lessonPointNumber == 1){
+        } else if (lessonNumber == 4) {
+            if (lessonPointNumber == 1) {
                 userInterfaceLessonFour.quadrantInterface();
-            } else  if (lessonPointNumber == 2){
+            } else if (lessonPointNumber == 2) {
                 Tasks.LessonFour.userInterfaceLessonFour.flipInterface();
-            } else if (lessonPointNumber == 3){
+            } else if (lessonPointNumber == 3) {
                 Tasks.LessonFour.userInterfaceLessonFour.twoRectangles();
             } else System.out.println("По этому заданию ничего нет :(");
-        }  else if (lessonNumber == 5) {
+        } else if (lessonNumber == 5) {
             Tasks.LessonFive.EntityApp.showArray();
-        }
-        else System.out.println("По этому уроку ничего нет :(");
+        } else if (lessonNumber == 6) {
+            if (lessonPointNumber == 1) {
+                Tasks.LessonSix.StructureApp.main();
+            } else if (lessonPointNumber == 2) {
+
+            } else if (lessonPointNumber == 3) {
+                Tasks.LessonSix.ArrayFilter.Trigger.main();
+            } else System.out.println("По этому заданию ничего нет :(");
+        } else System.out.println("По этому уроку ничего нет :(");
     }
 }
 

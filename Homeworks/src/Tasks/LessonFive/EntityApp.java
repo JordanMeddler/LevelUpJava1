@@ -10,7 +10,7 @@ public class EntityApp {
         entitiesArray[3] = new Entity("Fourth", 4);
         entitiesArray[4] = new Entity("Fifth", 5);
 
-        Entity findMe = new Entity("Fourth", 1);
+        Entity findMe = new Entity("Third", 3);
         EntityService service = new EntityService();
 
         if (service.contains(entitiesArray, findMe)) {

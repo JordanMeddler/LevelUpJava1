@@ -6,7 +6,7 @@ import Tasks.LessonTwo.TaskOne;
 import java.util.Scanner;
 
 public class Homework {
-
+    // TODO OBSOLETED - should be removed
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // для чтения ввода с клавиатуры
         int lessonNumber, lessonPointNumber; // для записи выбранного урока и выбранного пункта урока

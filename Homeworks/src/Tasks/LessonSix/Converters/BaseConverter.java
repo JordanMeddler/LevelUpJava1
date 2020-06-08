@@ -1,11 +1,7 @@
 package Tasks.LessonSix.Converters;
 
-public class BaseConverter {
-    public double convert(double value) {
+public abstract class BaseConverter {
+    public double convert() {
         return 0;
-    }
-
-    public double convert(Celsius celsius) {
-        return celsius.celsiusValue;
     }
 }

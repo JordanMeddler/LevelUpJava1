@@ -1,17 +1,15 @@
 package Tasks.LessonSix.Converters;
 
-public class CelsiusKelvin extends BaseConverter{
+public class CelsiusKelvin extends BaseConverter {
+    private double inputCelsius;
+    private double kelvin = 273.15;
 
-
-    public static void main(String[] args) {
-//        BaseConverter celsiusKelvinTest = new BaseConverter();
-//        System.out.println(celsiusKelvinTest.convert(5));
-        CelsiusKelvin celsiusKelvinTest = new CelsiusKelvin();
-        System.out.println(celsiusKelvinTest.convert(5));
+    CelsiusKelvin(double inputCelsius) {
+        this.inputCelsius = inputCelsius;
     }
 
     @Override
-    public double convert(double value) {
-        return value + 273.15;
+    public double convert() {
+        return inputCelsius + kelvin;
     }
 }

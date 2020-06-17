@@ -22,6 +22,7 @@ public class Frequent {
         string = string.replace(":", "");
         string = string.replace(".", "");
 
+//        Нам нужно посчитать именно слова, а не вариации с заглавной или прописной поэтому привожу все в lowercase
         string = string.toLowerCase();
         String[] words = string.split(" ");
 
@@ -40,13 +41,8 @@ public class Frequent {
         List<Map.Entry<String, Integer>> list = new ArrayList<>(wordsOccurences.entrySet());
         list.sort(Map.Entry.comparingByValue());
 
-        Map<String, Integer> result = new LinkedHashMap<>();
-        for (Map.Entry<String, Integer> entry : list){
-            result.put(entry.getKey(), entry.getValue());
-        }
-
-        for (int i = 0; i < 10; i++) {
-
+        for (int i = list.size(); i != list.size() - 10; i--) {
+            System.out.println(list.get(i - 1));
         }
     }
 
